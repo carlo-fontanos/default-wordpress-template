@@ -1,12 +1,10 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+A Startup theme for your custom WordPress projects
 
-### What is this repository for? ###
+### This repository is for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+My Friends, Colleagues and pretty much everyone else who is interested in building custom Web Applications or Simple Blogs using WordPress.
 
 ### Features ###
 
