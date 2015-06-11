@@ -1,0 +1,17 @@
+<?php
+/**
+ *	@class  		CVF_Posts
+ * 
+ *  @description 	Handles all post related actions
+ *  @since	 		3.9.2
+ *  @created		10/09/2014
+ *	@author			Carl Victor Fontanos. (CVF)
+ *	@authorurl		www.carlofontanos.com
+ */
+
+
+class CVF_Posts {
+	
+	public function __construct() {}
+
+}
