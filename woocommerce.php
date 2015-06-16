@@ -2,12 +2,10 @@
 
 	<section class = "inner-page-wrapper">
 		<section class = "container">
-			<section class  ="col-md-12">
-				<section class = "row content">
-					<div class="woocommerce">
-						<?php woocommerce_content(); ?>
-					</div>
-				</section>
+			<section class = "row content">
+				<div class="woocommerce">
+					<?php woocommerce_content(); ?>
+				</div>
 			</section>
 		</section>
 	</section>
