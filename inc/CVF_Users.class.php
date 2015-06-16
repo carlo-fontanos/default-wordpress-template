@@ -12,6 +12,10 @@
 
 class CVF_Users {
 	
+	/**
+	 * Construct method and variables
+	 * 
+	 */
 	public function __construct() {}
 
 }

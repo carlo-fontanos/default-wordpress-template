@@ -12,6 +12,10 @@
 
 class CVF_Posts {
 	
+	/**
+	 * Construct method and variables
+	 * 
+	 */
 	public function __construct() {}
 
 }
