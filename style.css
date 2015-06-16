@@ -1,10 +1,15 @@
 /**
-*
-Theme Name: Default Theme
-Author: Esilverconnect Web Designs
-Author URI: http://www.silverconnectwebdesigns.com/
-Version: 999
-*/
+ *
+ *  Theme Name: Default Theme
+ *  Author: Esilverconnect Web Designs
+ *  Author URI: http://www.silverconnectwebdesigns.com/
+ *  Version: 99
+ *	License: GNU General Public License v2 or later
+ *	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ *	Tags: theme, wordpress, default, responsive, static
+ *	Text Domain: cvftheme
+ * 
+ */
 
 @import url(http://fonts.googleapis.com/css?family=Lato);
 /* font-family: 'Lato', sans-serif; */
