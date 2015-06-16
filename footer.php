@@ -3,7 +3,7 @@
 		<section class  ="col-md-12">
 			<section class = "row footer">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-				<cite>Copyright &copy; <a href="<?php echo home_url('/'); ?>"><?php bloginfo( 'name' ); ?></a>, <?php echo date('Y'); ?>. All Rights Reserved.</cite>
+				<cite><?php _e('Copyright', 'cvftheme'); ?> &copy; <a href="<?php echo home_url('/'); ?>"><?php bloginfo( 'name' ); ?></a>, <?php echo date('Y'); ?>. <?php _e('All Rights Reserved', 'cvftheme'); ?>.</cite>
 			</section>
 		</section>
 	</section>
