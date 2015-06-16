@@ -9,79 +9,50 @@
  *	@authorurl		www.carlofontanos.com
  */
 
-require_once('CVF_Theme.class.php');
-require_once('CVF_Users.class.php');
-require_once('CVF_Posts.class.php');
+require_once( 'CVF_Theme.class.php' );
+require_once( 'CVF_Users.class.php' );
+require_once( 'CVF_Posts.class.php' );
 
-
+/**
+ * Use this function for debugging PHP array outputs
+ *
+ * @param String 	$a The variable or method to debug
+ *
+ */
 function pr( $a ) {
     print( '<pre>' ); print_r( $a ); print( '</pre>' );
 }
 
-
-function limit_words($text, $limit) {
+/**
+ * Limits the numbers of words to be outputted from a text
+ *
+ * @param String 	$text 
+ * @param Integer 	$limit
+ * @return String
+ *
+ */
+function limit_words( $text, $limit ) {
     $words = explode(" ",$text);
     return implode(" ",array_splice($words,0,$limit));
 }
 
-
-add_action('wp_enqueue_scripts', 'cvf_load_scripts');
-function cvf_load_scripts() {
-
-	wp_enqueue_script('jquery-ui', '//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js', array('jquery'), '1.11.1');
-
-}
-
- 
-function cvf_output_errors($errors) {
-
-	foreach ($errors as $error) {
-		return '<p class = "bg-danger">' . $error . '</p>';
-	}
-}
-
-
-function cvf_retrieve_input($input) {
-
-	if ($_POST) { 
-	
-		$data = $_REQUEST[$input];
-		
-		if ($input != '') { 
-			echo $data; 
-		}
-	}
-}
-
-
-function cvf_generate_random_code($length=10) {
+/**
+ * Use this function if you need to generate a random hash code
+ * Common usage is for: Email validation string, login authentication string
+ *
+ * @param Integer $length
+ * @return String
+ *
+ */
+function cvf_generate_random_code( $length = 10 ) {
  
    $string = '';
    $characters = "23456789ABCDEFHJKLMNPRTVWXYZabcdefghijklmnopqrstuvwxyz";
  
    for ($p = 0; $p < $length; $p++) {
-       $string .= $characters[mt_rand(0, strlen($characters)-1)];
+       $string .= $characters[mt_rand(0, strlen( $characters )-1)];
    }
  
    return $string;
  
-}
-
-
-function cvf_contains($text, $word) {
-		
-	$patt = "/(?:^|[^a-zA-Z])" . preg_quote($word, '/') . "(?:$|[^a-zA-Z])/i";		
-	return preg_match($patt, $text);
-	
-}
-
-
-function cvf_validate_value($value) {
-	
-	if($value){
-		return $value;
-	} else {
-		return 'N/A';
-	}
-	
 }
