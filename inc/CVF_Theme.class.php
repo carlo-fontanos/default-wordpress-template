@@ -14,6 +14,10 @@ $site_options = get_option('custom_site_options');
 
 class CVF_Theme {
 	
+	/**
+	 * Construct method and variables
+	 * 
+	 */
 	public function __construct() {
 		
 		add_action( 'after_setup_theme', array( $this, 'cvf_wordpress_setup' ) );
@@ -25,11 +29,28 @@ class CVF_Theme {
 	
 	}
 	
+	
+	/**
+	 * All custom JavaScripts goes here 
+	 *
+	 */
+	public function cvf_custom_scripts() {
+		
+		wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', array(), '1.11.3' );
+		wp_enqueue_script( 'jquery-ui', '//ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js', array('jquery'), '1.11.1' );
+	
+	}
+	
+	
+	/**
+	 * Put items that you want to execute when theme is activated
+	 * 
+	 */
 	public function cvf_wordpress_setup() {
 		
 		register_nav_menus( array(
-			'primary' => __( 'Primary Navigation', 'CVF' ),
-			'footer' => __( 'Footer Navigation', 'CVF' )
+			'primary' 	=> __( 'Primary Navigation', 'CVF' ),
+			'footer' 	=> __( 'Footer Navigation', 'CVF' )
 		) );
 		
 		add_theme_support( 'post-formats', array( 'aside', 'image' ) );
@@ -38,6 +59,10 @@ class CVF_Theme {
 	}
 	
 	
+	/**
+	 * Register sidebar items
+	 * 
+	 */
 	public function cvf_wordpress_widgets_init() {
 
 		register_sidebar( array(
@@ -107,26 +132,18 @@ class CVF_Theme {
 
 	public function cvf_site_options_enqueue_scripts() {
 		
-		wp_register_script( 'image-upload',  get_template_directory_uri() .'/scripts/custom.js', array('jquery','media-upload','thickbox') );
+		wp_register_script( 'image-upload',  get_template_directory_uri() .'/js/site-options.js', array('jquery','media-upload','thickbox') );
 
 		if ( 'appearance_page_site_options' == get_current_screen() -> id ) {
 			
-			wp_enqueue_script('jquery');
-			wp_enqueue_script('thickbox');
-			wp_enqueue_script('media-upload');
-			wp_enqueue_script('image-upload');
+			wp_enqueue_script( 'jquery' );
+			wp_enqueue_script( 'thickbox' );
+			wp_enqueue_script( 'media-upload' );
+			wp_enqueue_script( 'image-upload' );
 			
-			wp_enqueue_style('thickbox');
+			wp_enqueue_style( 'thickbox');
 			
 		}
-		
-	}
-
-
-	public function cvf_custom_scripts() {
-		
-		wp_enqueue_script('quovolver', get_template_directory_uri(). '/scripts/jquery.quovolver-1.0.js', array('jquery') );
-		wp_enqueue_script('custom', get_template_directory_uri(). '/scripts/custom.js', array('jquery','quovolver') );
 		
 	}
 
