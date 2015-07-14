@@ -1,4 +1,16 @@
 <?php get_header(); ?>
+	
+	<?php if(is_front_page()): ?>
+		<section class = "banner-wrapper">
+			<section class = "container">
+				<section class  ="col-md-12">
+					<section class = "row banner">
+						
+					</section>
+				</section>
+			</section>
+		</section>
+	<?php endif; ?>
 
 	<section class = "front-page-wrapper">
 		<section class = "container">
