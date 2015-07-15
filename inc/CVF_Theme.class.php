@@ -98,7 +98,7 @@ class CVF_Theme {
 		?>
 		
 		<div class="wrap">
-			<?php screen_icon(); echo "<h2>". __( 'Custom Site Options', 'CVF' ) . "</h2>"; ?>
+			<?php echo "<h2>". __( 'Custom Site Options', 'CVF' ) . "</h2>"; ?>
 			<?php if ( false !== $_REQUEST['settings-updated'] ) : ?>
 				<div id="setting-error-settings_updated" class="updated settings-error notice is-dismissible"> 
 					<p><strong><?php _e( 'Site Options Saved', 'CVF' ); ?></strong></p>
@@ -113,14 +113,14 @@ class CVF_Theme {
 					<tr valign="top">
 						<th scope="row"><?php _e( 'Company Logo', 'CVF' ); ?></th>
 						<td>
-							<input id="custom_site_options[logourl]" type="text" name="custom_site_options[logourl]" value="<?php esc_attr_e( $options['logourl'] ); ?>" class="regular-text" />
+							<input id="custom_site_options[logourl]" type="text" name="custom_site_options[logourl]" value="<?php echo $options['logourl']; ?>" class="regular-text" />
 							<input id="upload_logo_button" type="button" class="button" value="<?php _e( 'Upload Logo', 'CVF' ); ?>" />
 							<div id="uplogo" style="margin:10px 0 0;"><?php echo ((isset($options['logourl']) && $options['logourl'] != "") ? "<img src=\"" . $options['logourl'] . "\" alt=\"\" />" : ""); ?></div>
 						</td>
 					</tr>
 					<tr valign="top">
 						<th scope="row"><?php _e( 'Footer Description', 'CVF' ); ?></th>
-						<td><input id="custom_site_options[footerdescription]" type="text" name="custom_site_options[footerdescription]" value="<?php esc_attr_e( $options['footerdescription'] ); ?>" class="regular-text" /></td>
+						<td><input id="custom_site_options[footerdescription]" type="text" name="custom_site_options[footerdescription]" value="<?php echo $options['footerdescription']; ?>" class="regular-text" /></td>
 					</tr>
 				</table>
 				<strong style="margin-top:10px; display:block;"><input type="submit" value="<?php _e( 'Save Site Options', 'CVF' ); ?>" class="button button-primary" /></strong>

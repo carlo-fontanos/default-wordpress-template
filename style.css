@@ -1,13 +1,15 @@
 /**
  *
  *  Theme Name: Default Theme
+ *	Theme URI: https://carlo-fontanos@bitbucket.org/carlo-fontanos/default-wordpress-template.git
  *  Author: Esilverconnect Web Designs
  *  Author URI: http://www.silverconnectwebdesigns.com/
  *  Version: 99
  *	License: GNU General Public License v2 or later
  *	License URI: http://www.gnu.org/licenses/gpl-2.0.html
- *	Tags: theme, wordpress, default, responsive, static
+ *	Tags: gray, white, light, responsive-layout, accessibility-ready, custom-menu
  *	Text Domain: cvftheme
+ *	Description: A foundation for building WordPress Themes
  * 
  */
 
@@ -27,6 +29,7 @@ a:hover { text-decoration:underline; color:#0F3647; }
 a img:hover { opacity:0.90; filter:alpha(opacity=90); -moz-opacity:0.90; zoom:1; }
 
 .clear { clear:both;}
+.wp-caption, .wp-caption-text, .sticky, .gallery-caption, .bypostauthor, .alignright, .alignleft, .aligncenter {}
 
 body { font:normal 12px Arial, Helvetica, sans-serif; margin:0; padding:0; color:#fff; background:#E8E8E8; }
 section.header-wrapper { background: #aaa; }
