@@ -9,9 +9,6 @@
  *	@authorurl		www.carlofontanos.com
  */
 
-
-$site_options = get_option('custom_site_options');
-
 class CVF_Theme {
 	
 	/**
@@ -20,12 +17,9 @@ class CVF_Theme {
 	 */
 	public function __construct() {
 		
-		add_action( 'after_setup_theme', array( $this, 'cvf_wordpress_setup' ) );
-		add_action( 'widgets_init', array( $this, 'cvf_wordpress_widgets_init' ) );
-		add_action( 'admin_init', array( $this, 'cvf_site_options_init' ) );
-		add_action( 'admin_menu', array( $this, 'cvf_site_options_add_page' ) );
-		add_action( 'admin_enqueue_scripts', array( $this, 'cvf_site_options_enqueue_scripts' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'cvf_custom_scripts' ) );
+		add_action( 'after_setup_theme', array( $this, 'cvf_wordpress_setup' ) );
+		add_action( 'widgets_init', array( $this, 'cvf_wordpress_widgets_init' ) );		
 	
 	}
 	
@@ -71,80 +65,6 @@ class CVF_Theme {
 			'id' 			=> 'sidebar-widget-area',		
 		) );
 				
-	}
-	
-	
-	public function cvf_site_options_init(){
-		
-		register_setting( 'site_options', 'custom_site_options' );
-	
-	} 
-	
-
-	public function cvf_site_options_add_page() {
-		
-		add_theme_page( __( 'Site Options', 'CVF' ), __( 'Site Options', 'CVF' ), 'edit_theme_options', 'site_options', 'CVF_Theme::cvf_site_options_do_page' );
-	
-	}
-	
-	
-	public static function cvf_site_options_do_page() { 
-
-		global $select_options; 
-		
-		if ( ! isset( $_REQUEST['settings-updated'] ) ) 
-			$_REQUEST['settings-updated'] = false; 
-		
-		?>
-		
-		<div class="wrap">
-			<?php echo "<h2>". __( 'Custom Site Options', 'CVF' ) . "</h2>"; ?>
-			<?php if ( false !== $_REQUEST['settings-updated'] ) : ?>
-				<div id="setting-error-settings_updated" class="updated settings-error notice is-dismissible"> 
-					<p><strong><?php _e( 'Site Options Saved', 'CVF' ); ?></strong></p>
-				</div>
-			<?php endif; ?> 
-		
-			<form method="post" action="options.php">
-			<?php settings_fields( 'site_options' ); ?>  
-			<?php $options = get_option( 'custom_site_options' ); ?> 
-			
-				<table class="form-table">
-					<tr valign="top">
-						<th scope="row"><?php _e( 'Company Logo', 'CVF' ); ?></th>
-						<td>
-							<input id="custom_site_options[logourl]" type="text" name="custom_site_options[logourl]" value="<?php echo $options['logourl']; ?>" class="regular-text" />
-							<input id="upload_logo_button" type="button" class="button" value="<?php _e( 'Upload Logo', 'CVF' ); ?>" />
-							<div id="uplogo" style="margin:10px 0 0;"><?php echo ((isset($options['logourl']) && $options['logourl'] != "") ? "<img src=\"" . $options['logourl'] . "\" alt=\"\" />" : ""); ?></div>
-						</td>
-					</tr>
-					<tr valign="top">
-						<th scope="row"><?php _e( 'Footer Description', 'CVF' ); ?></th>
-						<td><input id="custom_site_options[footerdescription]" type="text" name="custom_site_options[footerdescription]" value="<?php echo $options['footerdescription']; ?>" class="regular-text" /></td>
-					</tr>
-				</table>
-				<strong style="margin-top:10px; display:block;"><input type="submit" value="<?php _e( 'Save Site Options', 'CVF' ); ?>" class="button button-primary" /></strong>
-			</form>
-		</div><?php 
-		
-	}
-
-
-	public function cvf_site_options_enqueue_scripts() {
-		
-		wp_register_script( 'image-upload',  get_template_directory_uri() .'/js/site-options.js', array('jquery','media-upload','thickbox') );
-
-		if ( 'appearance_page_site_options' == get_current_screen() -> id ) {
-			
-			wp_enqueue_script( 'jquery' );
-			wp_enqueue_script( 'thickbox' );
-			wp_enqueue_script( 'media-upload' );
-			wp_enqueue_script( 'image-upload' );
-			
-			wp_enqueue_style( 'thickbox');
-			
-		}
-		
 	}
 
 } new CVF_Theme;
