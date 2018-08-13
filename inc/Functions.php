@@ -9,9 +9,9 @@
  *	@authorurl		www.carlofontanos.com
  */
 
-require_once( 'CVF_Theme.class.php' );
-require_once( 'CVF_Users.class.php' );
-require_once( 'CVF_Posts.class.php' );
+require_once( 'Theme.class.php' );
+require_once( 'Users.class.php' );
+require_once( 'Posts.class.php' );
 
 /**
  * Use this function for debugging PHP array outputs

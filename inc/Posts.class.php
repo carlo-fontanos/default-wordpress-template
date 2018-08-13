@@ -1,6 +1,6 @@
 <?php
 /**
- *	@class  		CVF_Posts
+ *	@class  		Posts
  * 
  *  @description 	Handles all post related actions
  *  @since	 		3.9.2

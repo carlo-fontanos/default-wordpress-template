@@ -1,6 +1,6 @@
 <?php
 /**
- *	@class  		CVF_Users
+ *	@class  		Users
  * 
  *  @description 	Handles all user related actions
  *  @since	 		3.9.2

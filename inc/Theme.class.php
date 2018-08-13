@@ -1,6 +1,6 @@
 <?php
 /**
- *	@class  		CVF_Theme
+ *	@class  		Theme
  * 
  *  @description 	Wordpress Theme Setup Functions
  *  @since	 		3.9.2

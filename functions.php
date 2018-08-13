@@ -1,2 +1,2 @@
 <?php
-require_once('inc/CVF_Functions.php');
+require_once('inc/Functions.php');
