@@ -8,8 +8,8 @@ My Friends, Colleagues and pretty much everyone else who is interested in buildi
 
 ### Features ###
 
-* OOP Structure
-* Uses i18n text domain
+* Bootstrap 4.1
+* No nonsense codes 
 * WooCommerce-ready 
 
 ### Contribution guidelines ###
