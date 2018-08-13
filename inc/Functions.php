@@ -44,7 +44,7 @@ function limit_words( $text, $limit ) {
  * @return String
  *
  */
-function cvf_generate_random_code( $length = 10 ) {
+function generate_random_code( $length = 10 ) {
  
    $string = '';
    $characters = "23456789ABCDEFHJKLMNPRTVWXYZabcdefghijklmnopqrstuvwxyz";

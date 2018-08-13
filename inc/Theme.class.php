@@ -9,7 +9,7 @@
  *	@authorurl		www.carlofontanos.com
  */
 
-class CVF_Theme {
+class Theme {
 	
 	/**
 	 * Construct method and variables
@@ -17,9 +17,9 @@ class CVF_Theme {
 	 */
 	public function __construct() {
 		
-		add_action( 'wp_enqueue_scripts', array( $this, 'cvf_custom_scripts' ) );
-		add_action( 'after_setup_theme', array( $this, 'cvf_wordpress_setup' ) );
-		add_action( 'widgets_init', array( $this, 'cvf_wordpress_widgets_init' ) );		
+		add_action( 'wp_enqueue_scripts', array( $this, 'custom_scripts' ) );
+		add_action( 'after_setup_theme', array( $this, 'wordpress_setup' ) );
+		add_action( 'widgets_init', array( $this, 'wordpress_widgets_init' ) );		
 	
 	}
 	
@@ -28,7 +28,7 @@ class CVF_Theme {
 	 * All custom JavaScripts goes here 
 	 *
 	 */
-	public function cvf_custom_scripts() {
+	public function custom_scripts() {
 		
 		wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', array(), '1.11.3' );
 		wp_enqueue_script( 'jquery-ui', '//ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js', array('jquery'), '1.11.1' );
@@ -40,7 +40,7 @@ class CVF_Theme {
 	 * Put items that you want to execute when theme is activated
 	 * 
 	 */
-	public function cvf_wordpress_setup() {
+	public function wordpress_setup() {
 		
 		register_nav_menus( array(
 			'primary' 	=> __( 'Primary Navigation', 'CVF' ),
@@ -57,7 +57,7 @@ class CVF_Theme {
 	 * Register sidebar items
 	 * 
 	 */
-	public function cvf_wordpress_widgets_init() {
+	public function wordpress_widgets_init() {
 
 		register_sidebar( array(
 			'name' 			=> __( 'Sidebar', 'CVF' ),
@@ -67,4 +67,4 @@ class CVF_Theme {
 				
 	}
 
-} new CVF_Theme;
+} new Theme;

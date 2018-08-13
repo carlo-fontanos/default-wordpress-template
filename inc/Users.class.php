@@ -10,7 +10,7 @@
  */
 
 
-class CVF_Users {
+class Users {
 	
 	/**
 	 * Construct method and variables

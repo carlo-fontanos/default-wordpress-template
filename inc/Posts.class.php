@@ -10,7 +10,7 @@
  */
 
 
-class CVF_Posts {
+class Posts {
 	
 	/**
 	 * Construct method and variables
