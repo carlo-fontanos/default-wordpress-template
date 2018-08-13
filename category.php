@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 	
-	<div class = "inner-page-wrapper">
-		<div class = "container">
-			<div class = "content">
+	<div class="inner-page-wrapper">
+		<div class="container">
+			<div class="content">
 				<h2 class="page-title">
 					<?php printf( __( 'Category: %s', 'my-text-domain' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?>
 				</h2>

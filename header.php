@@ -24,21 +24,10 @@
 </head>
 
 <body <?php body_class(); ?>>
-
 	<div class="header-wrapper">
 		<div class="container">
-			<div class="row header">
-				<a href="<?php echo home_url(); ?>"><img src="<?php echo $logourl; ?>" class="logo" /></a>
+			<div class="header">
 				<nav><?php wp_nav_menu( array('theme_location'	=> 'primary')); ?></nav>
 			</div>
 		</div>
 	</div>
-    
-    
-        
-
-
-
-
-
-

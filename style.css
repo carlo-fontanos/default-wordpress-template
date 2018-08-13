@@ -33,9 +33,6 @@ body { color: #333; font-family: 'Noto Serif', serif; font-size: 16px; line-heig
 .content ul, .content ol { margin-left: 20px; }
 
 .footer { min-height: 300px; background: #dfdfdf; }
-.footer ul { margin: 0; padding: 0;}
-.footer ul li { list-style: none; display: inline; }
-.footer ul li a{ text-decoration: none; }
 
 
 @media screen and (max-width: 1200px) {

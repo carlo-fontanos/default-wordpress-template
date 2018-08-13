@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-	<div class = "inner-page-wrapper">
-		<div class = "container">
-			<div class = "content">	
+	<div class="inner-page-wrapper">
+		<div class="container">
+			<div class="content">	
 				<?php if ( have_posts() ) : ?>
 					<h2 class="page-title">
 						<?php if ( is_day() ) : ?>
