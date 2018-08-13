@@ -7,8 +7,8 @@
 	<title><?php wp_title('', true, 'right'); ?></title>
 
     <link rel="SHORTCUT ICON" href="favicon.ico" />
-	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto+Sans">
-	<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto+Serif" />
+	<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	
