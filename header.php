@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-    <meta charset = "<?php bloginfo( 'charset' ); ?>" />
-    <meta name = "viewport" content = "width=device-width" />
+    <meta charset="<?php bloginfo( 'charset' ); ?>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
 	<title><?php wp_title('', true, 'right'); ?></title>
 
-    <link rel = "SHORTCUT ICON" href = "favicon.ico" />
-	<link rel = "stylesheet" type = "text/css" href = "<?php echo get_template_directory_uri(); ?>/css/bootstrap.css" />
-	<link rel = "stylesheet" type = "text/css" href = "<?php echo get_template_directory_uri();; ?>/css/bootstrap-theme.css" />
-	<link rel = "stylesheet" type = "text/css" media = "all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-    <link rel = "pingback" href = "<?php bloginfo( 'pingback_url' ); ?>" />
+    <link rel="SHORTCUT ICON" href="favicon.ico" />
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto+Sans">
+	<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	
-	<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script type = "text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <?php
 		wp_head();
@@ -24,16 +25,14 @@
 
 <body <?php body_class(); ?>>
 
-	<section class = "header-wrapper">
-		<section class = "container">
-			<section class  ="col-md-12">
-				<section class = "row header">
-					<a href="<?php echo home_url(); ?>"><img src="<?php echo $logourl; ?>" class = "logo" /></a>
-					<nav><?php wp_nav_menu( array('theme_location'	=> 'primary')); ?></nav>
-				</section>
-			</section>
-		</section>
-	</section>
+	<div class="header-wrapper">
+		<div class="container">
+			<div class="row header">
+				<a href="<?php echo home_url(); ?>"><img src="<?php echo $logourl; ?>" class="logo" /></a>
+				<nav><?php wp_nav_menu( array('theme_location'	=> 'primary')); ?></nav>
+			</div>
+		</div>
+	</div>
     
     
         

@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-	<section class = "inner-page-wrapper">
-		<section class = "container">
-			<section class = "row content">	
+	<div class = "inner-page-wrapper">
+		<div class = "container">
+			<div class = "content">	
 				<?php if ( have_posts() ) : ?>
 					<h2 class="page-title">
 						<?php if ( is_day() ) : ?>
@@ -36,8 +36,8 @@
 						</div>
 					<?php endwhile; ?>			
 				<?php endif; ?>
-			</section>
-		</section>
-	</section>
+			</div>
+		</div>
+	</div>
 
 <?php get_footer(); ?>

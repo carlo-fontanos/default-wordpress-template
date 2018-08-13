@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 	
-	<section class = "inner-page-wrapper">
-		<section class = "container">
-			<section class = "row content">
+	<div class = "inner-page-wrapper">
+		<div class = "container">
+			<div class = "content">
 				<h2 class="page-title">
 					<?php printf( __( 'Category: %s', 'my-text-domain' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?>
 				</h2>
@@ -29,8 +29,8 @@
 					</div>
 				<?php endwhile; ?>
 				
-			</section>
-		</section>
-	</section>
+			</div>
+		</div>
+	</div>
 
 <?php get_footer(); ?>

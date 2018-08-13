@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-	<section class = "inner-page-wrapper">
-		<section class = "container">
-			<section class = "row content">	
+	<div class = "inner-page-wrapper">
+		<div class = "container">
+			<div class = "content">	
 
 				<?php if ( have_posts() ) : ?>
 
@@ -46,7 +46,7 @@
 					?>
 				
 				<?php else : ?>				
-					<section class="no-results not-found">
+					<div class="no-results not-found">
 						<h1 class="page-title"><?php _e( 'Nothing Found', 'my-text-domain' ); ?></h1>
 						
 						<div class="page-content">
@@ -68,11 +68,11 @@
 							<?php endif; ?>
 
 						</div>
-					</section>
+					</div>
 				<?php endif; ?>
 
-			</section>
-		</section>
-	</section>
+			</div>
+		</div>
+	</div>
 
 <?php get_footer(); ?>

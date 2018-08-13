@@ -1,26 +1,22 @@
 <?php get_header(); ?>
 	
-	<section class = "banner-wrapper">
-		<section class = "container">
-			<section class  ="col-md-12">
-				<section class = "row banner">
-					
-				</section>
-			</section>
-		</section>
-	</section>
+	<div class = "banner-wrapper">
+		<div class = "container">
+			<div class = "banner">
+				
+			</div>
+		</div>
+	</div>
 
-	<section class = "front-page-wrapper">
-		<section class = "container">
-			<section class  ="col-md-12">
-				<section class = "row content">
-					<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>					
-						<h1><?php the_title(); ?></h1>
-						<?php the_content(); ?>
-					<?php endwhile; ?>
-				</section>
-			</section>
-		</section>
-	</section>
+	<div class = "front-page-wrapper">
+		<div class = "container">
+			<div class = "content">
+				<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>					
+					<h1><?php the_title(); ?></h1>
+					<?php the_content(); ?>
+				<?php endwhile; ?>
+			</div>
+		</div>
+	</div>
 	
 <?php get_footer(); ?>

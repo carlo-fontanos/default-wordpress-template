@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-	<section class = "inner-page-wrapper">
-		<section class = "container">
-			<section class = "row content">
+	<div class = "inner-page-wrapper">
+		<div class = "container">
+			<div class = "content">
 				<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<h1><?php the_title(); ?></h1>
@@ -11,8 +11,8 @@
 						</article>
 					</article>
 				<?php endwhile; ?>
-			</section>
-		</section>
-	</section>
+			</div>
+		</div>
+	</div>
 	
 <?php get_footer(); ?>
