@@ -43,8 +43,8 @@ class Theme {
 	public function wordpress_setup() {
 		
 		register_nav_menus( array(
-			'primary' 	=> __( 'Primary Navigation', 'CVF' ),
-			'footer' 	=> __( 'Footer Navigation', 'CVF' )
+			'primary' 	=> __( 'Primary Navigation', 'my-text-domain' ),
+			'footer' 	=> __( 'Footer Navigation', 'my-text-domain' )
 		) );
 		
 		add_theme_support( 'post-formats', array( 'aside', 'image' ) );
@@ -60,8 +60,8 @@ class Theme {
 	public function wordpress_widgets_init() {
 
 		register_sidebar( array(
-			'name' 			=> __( 'Sidebar', 'CVF' ),
-			'description' 	=> __( 'Add your sidebar items here, the other items can be found under Page > Sidebar', 'CVF' ),
+			'name' 			=> __( 'Sidebar', 'my-text-domain' ),
+			'description' 	=> __( 'Add your sidebar items here, the other items can be found under Page > Sidebar', 'my-text-domain' ),
 			'id' 			=> 'sidebar-widget-area',		
 		) );
 				
